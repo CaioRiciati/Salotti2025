@@ -1,0 +1,105 @@
+:root {
+    --verde-esmeralda: #5bb8ad;
+    --verde-petroleo: #264653;
+    --amarelo-suave: #E9C46A;
+    --laranja-terroso: #F4A261;
+  }
+
+  img
+  {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+    margin-top: 60%;
+    
+  }
+
+  body{
+    margin: 0;
+    height: 100hv;
+    background-image: linear-gradient(to right, #5bb8ad, #277a71);
+  }
+  main{
+    margin: auto;
+    background-color: white;
+    width: 50%;
+    height: 60hv;
+    border-radius: 20px;
+
+  }
+
+
+  p{
+    --verde-esmeralda: #5bb8ad;
+    padding: 3%; 
+  }
+
+  header {
+    background-color: #264653;
+    margin-right: 20px;
+    border-radius: 3%;
+    width: 55%;
+
+  }
+
+
+  .loginb{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(123, 158, 152);
+    border: none;
+    border-radius: 10px;
+    width: 90%;
+    transition-duration: 1s;
+    margin: 10px;
+    margin-right: 10%;
+    margin-left: 5%;
+  }
+
+  button p {
+    margin-top: -15px;
+    font-size: 18px;
+    color: rgb(122, 122, 122);
+  }
+
+  main h1 {
+    color: gray;
+    text-align: start;
+    margin-bottom: -10px;
+    padding-left: 10px
+
+  }
+
+.h21{
+    text-align: start;
+    padding-left: 10px;
+  }
+
+  button:hover{
+    background-color: rgb(162, 216, 241);
+    cursor: pointer;
+    width: 94%;
+    height: 90%;
+  }
+
+  hr{
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .seta{
+    width: 5%;
+    margin-top: -18px;
+    margin-right: 1%;
+
+  }
+
+  .lado{
+    display: flex;
+  }
+
+  button h1{
+    align-items: start;
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Condicional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        textarea {
+            width: 300px;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: not-allowed;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:enabled {
+            background-color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <textarea id="textarea1" placeholder="Digite algo..."></textarea>
+    <textarea id="textarea2" placeholder="Digite algo..."></textarea>
+    <button id="meuBotao" disabled>Enviar</button>
+
+    <script>
+        const textarea1 = document.getElementById("textarea1");
+        const textarea2 = document.getElementById("textarea2");
+        const botao = document.getElementById("meuBotao");
+
+        function verificarCampos() {
+            if (textarea1.value.trim() !== "" && textarea2.value.trim() !== "") {
+                botao.disabled = false;
+            } else {
+                botao.disabled = true;
+            }
+        }
+
+        textarea1.addEventListener("input", verificarCampos);
+        textarea2.addEventListener("input", verificarCampos);
+    </script>
+
+</body>
+</html>
