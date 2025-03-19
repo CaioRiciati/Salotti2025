@@ -18,14 +18,22 @@
   body{
     margin: 0;
     height: 100hv;
-    background-image: linear-gradient(to right, #5bb8ad, #277a71);
+    background: fixed;
+    background-image: linear-gradient(to top, #5575e8, #05163d);
+    align-items: center;
+    padding: 10px;
   }
   main{
-    margin: auto;
-    background-color: white;
-    width: 50%;
-    height: 60hv;
+
+    margin:  auto;
+    background-color: rgba(0, 0, 0, 0.13);
+    width: auto;
+    max-width: 500px;
+    min-width: 350px;
+    height: auto;
+
     border-radius: 20px;
+
 
   }
 
@@ -47,8 +55,7 @@
   .loginb{
     text-decoration: none;
     color: black;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgb(123, 158, 152);
+    background-color: rgba(255, 255, 255, 0);
     border: none;
     border-radius: 10px;
     width: 90%;
@@ -65,11 +72,15 @@
   }
 
   main h1 {
-    color: gray;
+    color: rgb(255, 255, 255);
     text-align: start;
     margin-bottom: -10px;
     padding-left: 10px
 
+  }
+
+  main h2{
+    color: white;
   }
 
 .h21{
@@ -78,7 +89,7 @@
   }
 
   button:hover{
-    background-color: rgb(162, 216, 241);
+    background-color: rgba(0, 0, 0, 0.137);
     cursor: pointer;
     width: 94%;
     height: 90%;
@@ -102,4 +113,8 @@
 
   button h1{
     align-items: start;
+  }
+
+  .divcentro{
+margin-top: 10vh;
   }

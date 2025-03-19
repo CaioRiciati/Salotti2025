@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginAluno.css">
+    <style>
+        :root {
+            --verde-esmeralda: #5bb8ad;
+            --verde-petroleo: #264653;
+            --amarelo-suave: #E9C46A;
+            --laranja-terroso: #F4A261;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: fixed;
+            background-image: linear-gradient(to top, #5575e8, #05163d);
+        }
+
+        main {
+            display: block;
+            margin: auto;
+            background-color: white;
+            width: auto;
+            max-width: 620px;
+            min-width: 10px;
+            height: auto;
+            min-height: 400px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        textarea {
+            resize: none;
+            border-radius: 10px;
+            font-size: 25px;
+            transition-duration: .5s;
+        }
+
+        textarea::placeholder {
+            font-size: 25px;
+        }
+
+        main p {
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 30px;
+        }
+
+        header a {
+            text-decoration: none;
+            font-family: fantasy;
+            color: black;
+            font-size: 25px;
+            transition-duration: .5s;
+        }
+
+        header a:hover {
+            font-size: 30px;
+            transition-duration: .5s;
+            background-color: #264653;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        div {
+            margin-top: 60px;
+        }
+
+        #googleLogin {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Voltar</a>
+    </header>
+
+    <div>
+        <main>
+            <h1>Bem-Vindo</h1>
+            <h1>Faça login com seu RA para entrar no sistema.</h1>
+            <hr>
+            <p> Numero do RA: <textarea id="textarea1" placeholder="Digite aqui..." rows="1" cols="15"></textarea></p>
+            <p> Senha: <textarea id="textarea2" placeholder="Digite aqui..." rows="1" cols="20"></textarea></p>
+            <button id="meuBotao" disabled>Enviar</button>
+
+            <h1>Ou faça login com o Google</h1>
+            <div id="googleLogin"></div>
+
+            <script src="https://accounts.google.com/gsi/client" async defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+            <script>
+                // Função para login com Google
+                function handleCredentialResponse(response) {
+                    const data = jwt_decode(response.credential);
+                    alert("Bem-vindo, " + data.name);
+                    console.log("Token JWT:", response.credential);
+                    console.log("Dados do usuário:", data);
+                    // Aqui você pode redirecionar ou enviar os dados para o backend
+                }
+
+                window.onload = function () {
+                    google.accounts.id.initialize({
+                        client_id: "SUA_CLIENT_ID.apps.googleusercontent.com",
+                        callback: handleCredentialResponse
+                    });
+                    google.accounts.id.renderButton(
+                        document.getElementById("googleLogin"),
+                        { theme: "outline", size: "large" }
+                    );
+                    google.accounts.id.prompt(); // Exibe o prompt de login automaticamente
+                };
+
+                // Validação dos campos de RA e senha
+                const textarea1 = document.getElementById("textarea1");
+                const textarea2 = document.getElementById("textarea2");
+                const botao = document.getElementById("meuBotao");
+
+                function validarEntrada(event) {
+                    const regex = /^[0-9x\n]*$/;
+                    if (!regex.test(event.target.value)) {
+                        event.target.value = event.target.value.replace(/[^0-9x\n]/g, "");
+                    }
+                }
+
+                function verificarCampos() {
+                    if (textarea1.value.trim() !== "" && textarea2.value.trim() !== "") {
+                        botao.disabled = false;
+                    } else {
+                        botao.disabled = true;
+                    }
+                }
+
+                textarea1.addEventListener("input", validarEntrada);
+                textarea2.addEventListener("input", validarEntrada);
+                textarea1.addEventListener("input", verificarCampos);
+                textarea2.addEventListener("input", verificarCampos);
+            </script>
+        </main>
+    </div>
+</body>
+</html>
