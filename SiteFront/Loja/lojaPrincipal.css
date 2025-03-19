@@ -17,7 +17,7 @@
 
 * {
     margin: 0;
-    padding: ;
+    padding: 0;
 }
 
 body{
@@ -130,6 +130,7 @@ footer {
     background: linear-gradient(rgb(23, 184, 238)); 
     color: white;
     height: 100%;
+    margin-top: 25px;
 }
 
 nav a {
