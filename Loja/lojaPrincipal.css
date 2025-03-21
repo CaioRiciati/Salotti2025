@@ -21,7 +21,7 @@
 }
 
 body{
-    background: linear-gradient(to bottom, rgb(30, 169, 216), #304886, #0E2A54);
+    background: linear-gradient(to bottom, rgb(0, 0, 0), #304886, #0E2A54);
 }
 
 header{
@@ -51,6 +51,13 @@ header div{
     display:  flex;
 }
 
+header p {
+    color: white;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-right: 20px;
+
+}
 
 .infos{
     display: inline;
@@ -136,4 +143,8 @@ footer {
 nav a {
     color: rgb(129, 166, 233);
     text-decoration: none;
+}
+
+.perfil{
+
 }

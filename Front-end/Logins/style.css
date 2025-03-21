@@ -19,20 +19,21 @@
     margin: 0;
     height: 100hv;
     background: fixed;
-    background-image: linear-gradient(to top, #5575e8, #05163d);
-    align-items: center;
+    background-image: linear-gradient(to top, #05163d, #05163d);
+
     padding: 10px;
   }
   main{
 
     margin:  auto;
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(59, 59, 59, 0.171);
     width: auto;
-    max-width: 500px;
+    max-width: 470px;
     min-width: 350px;
     height: auto;
+  
 
-    border-radius: 20px;
+    border-radius: 10%;
 
 
   }
@@ -66,7 +67,7 @@
     margin-left: 5%;
   }
 
-  button p {
+ .bup {
     margin-top: -15px;
     font-size: 18px;
     color: rgb(122, 122, 122);
@@ -74,7 +75,7 @@
 
   main h1 {
     color: rgb(255, 255, 255);
-    text-align: start;
+    text-align: center;
     margin-bottom: -10px;
     padding-left: 10px
 
@@ -82,10 +83,12 @@
 
   main h2{
     color: white;
+    text-align: start;
+  
   }
 
 .h21{
-    text-align: start;
+    text-align: center;
     padding-left: 10px;
   }
 
@@ -102,14 +105,16 @@
   }
 
   .seta{
-    width: 5%;
-    margin-top: -18px;
-    margin-right: 1%;
+    width: 20%;
+    margin-top: -60px;
+    margin-right: -5%;
 
   }
 
   .lado{
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   button h1{
@@ -119,3 +124,20 @@
   .divcentro{
 margin-top: 10vh;
   }
+
+.next{
+  color: white;
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-top: -40px;
+  margin-left: 59%;
+
+}
+
+.divEspecial{
+display: flex;
+}
+
+.bemVindo{
+  text-align: center;
+}
