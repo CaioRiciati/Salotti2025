@@ -1,0 +1,121 @@
+:root {
+  --verde-esmeralda: #5bb8ad;
+  --verde-petroleo: #264653;
+  --amarelo-suave: #E9C46A;
+  --laranja-terroso: #F4A261;
+}
+
+img
+{
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-top: 60%;
+  
+}
+
+body{
+  margin: 0;
+  height: 100hv;
+  background: fixed;
+  background-image: linear-gradient(to top, #5575e8, #05163d);
+  align-items: center;
+  padding: 10px;
+}
+main{
+
+  margin:  auto;
+  background-color: rgba(0, 0, 0, 0.13);
+  width: auto;
+  max-width: 500px;
+  min-width: 350px;
+  height: auto;
+
+  border-radius: 20px;
+
+
+}
+
+
+p{
+  --verde-esmeralda: #5bb8ad;
+  padding: 3%; 
+}
+
+header {
+  background-color: #264653;
+  margin-right: 20px;
+  border-radius: 3%;
+  width: 55%;
+
+
+}
+
+
+.loginb{
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 10px;
+  width: 90%;
+  transition-duration: 1s;
+  margin: 10px;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+
+button p {
+  margin-top: -15px;
+  font-size: 18px;
+  color: rgb(122, 122, 122);
+}
+
+main h1 {
+  color: rgb(255, 255, 255);
+  text-align: start;
+  margin-bottom: -10px;
+  padding-left: 10px
+
+}
+
+main h2{
+  color: white;
+}
+
+.h21{
+  text-align: start;
+  padding-left: 10px;
+}
+
+button:hover{
+  background-color: rgba(0, 0, 0, 0.137);
+  cursor: pointer;
+  width: 94%;
+  height: 90%;
+}
+
+hr{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.seta{
+  width: 5%;
+  margin-top: -18px;
+  margin-right: 1%;
+
+}
+
+.lado{
+  display: flex;
+}
+
+button h1{
+  align-items: start;
+}
+
+.divcentro{
+margin-top: 10vh;
+}
