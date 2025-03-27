@@ -11,9 +11,9 @@ header{
 
 body{
 
+  background-image: linear-gradient(to top, #05163d, #05163d);
   height: 100hv;
   background: fixed;
-  background-image: linear-gradient(to top, #05163d, #5575e8);
 }
 
 main{
