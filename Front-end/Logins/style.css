@@ -14,7 +14,7 @@
     margin: 0;
     height: 100hv;
     background: fixed;
-    background-image: linear-gradient(to top, #05163d, #05163d);
+    background-image: linear-gradient(to top, #ffffff, #ffffff);
 
     padding: 10px;
   }
@@ -23,7 +23,7 @@
   main{
 
     margin:  auto;
-    background-color: rgba(59, 59, 59, 0.171);
+    background-color: rgba(2, 2, 2, 0.795);
     width: auto;
     max-width: 480px;
     min-width: 350px;
