@@ -3,52 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="loginAluno.css">
-
+    <title>Login de Aulno</title>
+    <link rel="stylesheet" href="LoginAluno.css">
 </head>
-
 <body>
     <header>
-        <a href="index.html">Voltar</a>
-    </header>
+        <nav>
+            <a href="index.html"> voltar</a>
+        </nav>
 
-    <div>
-        <main>
-            <h1>Bem-Vindo</h1>
-            <h1>Faça login com seu RA para entrar no sistema.</h1>
+    </header>
+    <main>
+        <div class=" menu">
+            <h1>Estudante</h1>
+            <h2>Faça seu cadastro</h2>
             <hr>
+
             <p> Numero do RA: <input type="password" name="numero" id="inumero" placeholder="Digite aqui..."></p>
             <p> Senha: <textarea id="textarea2" placeholder="Digite aqui..." rows="1" cols="20"></textarea></p>
             <button id="meuBotao" disabled>Enviar</button>
 
-            <h1>Ou faça login com o Google</h1>
-            <div id="googleLogin"></div>
+            <h2>Login</h2>
+            <input type="text" id="login" class="input-field">
+            
+            <h2>Senha</h2>
+            <input type="password" id="senha" class="input-field">
 
-            <script src="https://accounts.google.com/gsi/client" async defer></script>
-            <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
-            <script>
-                // Função para login com Google
-                function handleCredentialResponse(response) {
-                    const data = jwt_decode(response.credential);
-                    alert("Bem-vindo, " + data.name);
-                    console.log("Token JWT:", response.credential);
-                    console.log("Dados do usuário:", data);
-                    // Aqui você pode redirecionar ou enviar os dados para o backend
-                }
+            
+        <div class="botoes">
+            <a href="index.html">Voltar</a>
+   
+            <a href="####">proximo</a>
+           </div>
 
-                window.onload = function () {
-                    google.accounts.id.initialize({
-                        client_id: "SUA_CLIENT_ID.apps.googleusercontent.com",
-                        callback: handleCredentialResponse
-                    });
-                    google.accounts.id.renderButton(
-                        document.getElementById("googleLogin"),
-                        { theme: "outline", size: "large" }
-                    );
-                    google.accounts.id.prompt(); // Exibe o prompt de login automaticamente
-                };
+        </div>
+    </main>
 
+    <script>
+        
                 // Validação dos campos de RA e senha
                 const isenha = document.getElementById("isenha");
                 const textarea2 = document.getElementById("textarea2");
@@ -74,7 +66,7 @@
                 textarea1.addEventListener("input", verificarCampos);
                 textarea2.addEventListener("input", verificarCampos);
             </script>
-        </main>
-    </div>
+    </script>
+
 </body>
 </html>
