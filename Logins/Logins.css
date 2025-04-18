@@ -1,0 +1,145 @@
+body {
+    background-color: #dbdbdb;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.bloco1 {
+    width: 55%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.sobre {
+    background: linear-gradient(to right, #a4a1db91, #5d45d883);
+    flex: 1;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.footer {
+    background-color: #b8b8b8;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Volte ao comportamento original para os botões */
+.bloco2 {
+    /* antes: justify-content: flex-start; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 45%;
+}
+
+/* Remova margin-top/bottom que você havia colocado */
+.logo {
+    width: 200px;
+    height: auto;
+    /* margin-top: 20px; */
+    /* margin-bottom: 7%; */
+
+    /* ESTAS LINHAS QUEVÃO LEVANTAR SOMENTE A LOGO */
+    position: relative;
+    top: -40px; /* ajuste esse valor para mais/menos */
+}
+
+/* os botões continuam centralizados verticalmente, sem alterações */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 250px;
+    align-items: center;
+}
+
+.botaoEntrar,
+.botaoCad {
+    text-decoration: none;
+    font-size: 2em;
+    background: linear-gradient(to right, #010049d0, #3633cdd0);
+    padding: 12% 32%;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+    transition: all 1s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.botaoEntrar:hover,
+.botaoCad:hover {
+    padding: 14% 34%;
+    background-color: #6d6bc7d0;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .bloco1 {
+        order: 2;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .bloco2 {
+        order: 1;
+        width: 100%;
+        padding: 20px;
+    }
+
+       /* reduz o tamanho da fonte de .sobre em telas pequenas */
+   .sobre {
+    font-size: 1.2em;
+    }
+}
+
+.botaoGoogle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.1em;
+    background-color: #c4c4c4;
+    padding: 12px 0;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 250px;
+    transition: background-color 0.2s ease;
+}
+
+.botaoGoogle:hover {
+    background-color: #71798a;
+}
+
+.iconGoogle {
+    width: 20px;
+    height: 20px;
+}
+
