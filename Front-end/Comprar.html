@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comprar Pulseira</title>
   <link rel="stylesheet" href="Comprar.css" />
+
+<style>
+  
+</style>
+
 </head>
 <body>
+  <a href="Produtos.html"> <img class="voltar" src="Imagens/botãovoltar.png" alt="voltar"></a>
   <div class="container">
-    <button class="voltar">&larr;</button>
 
     <div class="conteudo">
       <div class="imagem">
-        <img src="pulseira.jpg" alt="Pulseira English" />
+        <img src="Imagens/produtoImg.jpg" alt="aa" />
       </div>
 
       <div class="detalhes">
@@ -27,9 +32,9 @@
         <div class="controle-quantidade">
           <span class="preco">Preço</span>
           <div class="quantidade">
-            <button onclick="alterarQuantidade(-1)">-</button>
-            <span id="quantidade">1</span>
-            <button onclick="alterarQuantidade(1)">+</button>
+            <button class="bottao" onclick="alterarQuantidade(-1)">-</button>
+            <span  id="quantidade">1</span>
+            <button class="bottao" onclick="alterarQuantidade(1)">+</button>
           </div>
         </div>
 
