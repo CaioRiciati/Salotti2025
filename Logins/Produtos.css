@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.botao {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+    margin-bottom: -2%;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.carrinho {
+    width: 50px;
+    height: auto;
+    margin-left: 4%;
+}
+
+.perfil {
+    width: 80px;
+    height: auto;
+}
+
+.saldoENome {
+    display: flex;
+    flex-direction: column;
+}
+
+.PLojas {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.linha {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: auto;
+}
+
+.ProdutoImg{
+    margin-top: 2%;
+    width: 200px;
+
+}
+
+.Produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #414141;
+}
+
+.Comprar{
+    display: flex;
+    text-decoration: none;
+    width: 360px;
+    height: 70px;
+    background-color: #6d6d6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    margin-bottom: 120px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .PLojas {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .saldoENome {
+        margin-left: 0;
+    }
+}
