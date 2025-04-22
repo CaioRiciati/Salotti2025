@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Logar.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Salotti Store</title>
+    <link rel="stylesheet" href="Logar.css">
+    <script>
+        function habilitarBotao() {
+            const login = document.getElementById('login').value;
+            const senha = document.getElementById('senha').value;
+            const botaoEntrar = document.getElementById('botao-entrar');
+            botaoEntrar.disabled = !(login && senha); 
+        }
+
+        function redirecionar() {
+            const login = document.getElementById('login').value;
+            const senha = document.getElementById('senha').value;
+            if (login && senha) {
+                window.location.href = 'Produtos.html'; 
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">Salotti <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> <span>Store</span></h1>
+
+
+            <div class="login-box">
+                <p class="role">Estudante</p>
+                <a href="#" class="register-link">Faça seu Login</a>
+                <div class="linha"></div>
+                <form onsubmit="return redirecionar()">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" name="login" required oninput="habilitarBotao()">
+            
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required oninput="habilitarBotao()">
+            
+                    <div class="buttons">
+                        <a href="Logins.html" class="voltar">Voltar</a>
+                    <button type="submit" id="botao-entrar" class="entrar" disabled>Entrar</button>
+                    </div>
+                </form>
+            </div>
+            
+                
+            </form>
+        </div>
+        <div class="logo-container">
+            <h2 class="main-word">Salotti</h2>
+            <p class="sub-word">Devs</p>
+        </div>
+
+        
+    </div>
+</body>
+</html>

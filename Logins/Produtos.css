@@ -1,102 +1,154 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+  }
 
-.botao {
-    width: 50px;
-    height: auto;
-    margin: 10px;
-    margin-bottom: -2%;
-}
-
-.menu {
+  .menu {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    gap: 10px;
-}
+    padding: 20px;
+    flex-wrap: wrap;
+  }
 
-.carrinho {
-    width: 50px;
+  .menu-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .botao,
+  .carrinho {
+    width: 40px;
     height: auto;
-    margin-left: 4%;
-}
+  }
 
-.perfil {
-    width: 80px;
-    height: auto;
-}
+  .PLojas {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
 
-.saldoENome {
+  .menu-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .saldoENome {
     display: flex;
     flex-direction: column;
-}
+    align-items: flex-end;
+    text-align: right;
+  }
 
-.PLojas {
-    flex-grow: 1;
-    font-size: 1.5rem;
-    margin-left: 20px;
-}
+  .perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
-.linha {
+  .linha {
     width: 90%;
     height: 2px;
-    background-color: black;
+    background-color: #ccc;
+    margin: 0 auto 20px;
+  }
+
+  .produtos-container {
     margin: auto;
-}
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Alterei para auto-fill e reduzi o tamanho mínimo para 250px */
+    gap: 10px;
+    padding: 20px 5%;
+    justify-content: center;
+  }
+  
 
-.ProdutoImg{
-    margin-top: 2%;
-    width: 200px;
-
-}
-
-.Produto{
+  .Produto {
+    margin: 0;
+    width: 300px;
+    height: 240px;
+    background: linear-gradient(135deg, #8d8cd6, #6d6dd6);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 360px;
-    height: 300px;
-    margin: 20px auto;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    margin-left: 10%;
+  }
+
+  .Produto:hover {
+    transform: scale(1.03);
+  }
+
+  .Produto img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
     border-radius: 10px;
-    background-color: #414141;
-}
+  }
 
-.Comprar{
-    display: flex;
-    text-decoration: none;
-    width: 360px;
-    height: 70px;
-    background-color: #6d6d6d;
+  .Produto h1 {
+    margin: 15px 0 5px;
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  .Produto h2 {
+    margin: 0 0 15px;
+    font-weight: normal;
+    color: #e0e0e0;
+    font-size: 1rem;
+  }
+
+  .Comprar {
+    margin: 0;
+    margin-bottom: -14px;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 14px;
+    background: linear-gradient(to right, #4c4caa, #7a7add);
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-}
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+  }
 
-h2{
-    margin-bottom: 120px;
-}
+  .Comprar:hover {
+    background: linear-gradient(to right, #3c3c8c, #6969c9);
+  }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .menu {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
     }
 
-    .PLojas {
-        margin-left: 0;
-        margin-top: 10px;
+    .menu-right {
+      align-self: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
     }
 
-    .saldoENome {
-        margin-left: 0;
+    .Produto img {
+      max-height: 120px;
     }
-}
+  }
+
+  @media (max-width: 600px) {
+    .produtos-container {
+      grid-template-columns: 1fr; /* Para telas muito pequenas, mostra 1 produto por linha */
+    }
+  }
