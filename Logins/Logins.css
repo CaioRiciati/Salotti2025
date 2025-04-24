@@ -21,9 +21,9 @@ main {
 }
 
 .sobre {
-    background: linear-gradient(to right, #a4a1db91, #5d45d883);
+    background: linear-gradient(to right, #010049d0, #3633cdd0);
     flex: 1;
-    border-radius: 20px;
+    border-radius: 7%;
     padding: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: white;
@@ -33,7 +33,7 @@ main {
 
 .footer {
     background-color: #b8b8b8;
-    border-radius: 15px;
+    border-radius: 30px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -68,7 +68,7 @@ main {
 .botoes {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
     width: 100%;
     max-width: 250px;
     align-items: center;
@@ -77,9 +77,9 @@ main {
 .botaoEntrar,
 .botaoCad {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 250%;
     background: linear-gradient(to right, #010049d0, #3633cdd0);
-    padding: 12% 32%;
+    padding: 15% 50%;
     color: white;
     border-radius: 10px;
     transition: background-color 0.3s ease;
@@ -141,5 +141,10 @@ main {
 .iconGoogle {
     width: 20px;
     height: 20px;
+}
+
+.sobreP{
+    font-size: 180%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
 }
 
