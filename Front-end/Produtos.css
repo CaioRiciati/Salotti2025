@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .menu-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .botao,
+  .carrinho {
+    width: 40px;
+    height: auto;
+  }
+
+  .PLojas {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .menu-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .saldoENome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .linha {
+    width: 90%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 auto 20px;
+    margin-top: -20px;
+  }
+
+  .produtos-container {
+    margin: auto;
+    width: 90%; /* Mudado para 100% para que o contêiner ocupe toda a largura disponível */
+    max-width: 1000px; /* Mantém o limite de 1200px quando a tela for grande o suficiente */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px 5%;
+    justify-content: center;
+  }
+  
+
+  .Produto {
+    margin: 0;
+    width: 300px;
+    height: 240px;
+    background: linear-gradient(135deg, #8d8cd6, #6d6dd6);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    margin-left: 10%;
+  }
+
+  .Produto:hover {
+    transform: scale(1.03);
+  }
+
+  .Produto img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .Produto h1 {
+    margin: 15px 0 5px;
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
+  .Produto h2 {
+    margin: 0 0 15px;
+    font-weight: normal;
+    color: #e0e0e0;
+    font-size: 1rem;
+  }
+
+  .Comprar {
+    margin: 0;
+    margin-bottom: -14px;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 14px;
+    background: linear-gradient(to right, #4c4caa, #7a7add);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+  }
+
+  .Comprar:hover {
+    background: linear-gradient(to right, #3c3c8c, #6969c9);
+  }
+
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .menu-right {
+      align-self: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .Produto img {
+      max-height: 120px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .produtos-container {
+      grid-template-columns: 1fr; /* Para telas muito pequenas, mostra 1 produto por linha */
+    }
+  }

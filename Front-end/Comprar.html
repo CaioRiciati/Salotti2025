@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comprar Pulseira</title>
+  <link rel="stylesheet" href="Comprar.css" />
+
+<style>
+  
+</style>
+
+</head>
+<body>
+  <a href="Produtos.html"> <img class="voltar" src="Imagens/botãovoltar.png" alt="voltar"></a>
+  <div class="container">
+
+    <div class="conteudo">
+      <div class="imagem">
+        <img src="Imagens/produtoImg.jpg" alt="aa" />
+      </div>
+
+      <div class="detalhes">
+        <h3>Escolha a variação:</h3>
+        <form>
+          <label><input type="radio" name="variacao"> Variação 1</label><br />
+          <label><input type="radio" name="variacao"> Variação 2</label><br />
+          <label><input type="radio" name="variacao"> Variação 3</label><br />
+          <label><input type="radio" name="variacao"> Variação 4</label><br />
+        </form>
+
+        <div class="controle-quantidade">
+          <span class="preco">Preço</span>
+          <div class="quantidade">
+            <button class="bottao" onclick="alterarQuantidade(-1)">-</button>
+            <span  id="quantidade">1</span>
+            <button class="bottao" onclick="alterarQuantidade(1)">+</button>
+          </div>
+        </div>
+
+        <button class="comprar">Comprar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let quantidade = 1;
+
+    function alterarQuantidade(valor) {
+      const novaQuantidade = quantidade + valor;
+      if (novaQuantidade >= 1 && novaQuantidade <= 2) {
+        quantidade = novaQuantidade;
+        document.getElementById("quantidade").textContent = quantidade;
+      }
+    }
+  </script>
+</body>
+</html>
